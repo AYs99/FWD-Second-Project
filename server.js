@@ -28,3 +28,14 @@ const server = app.listen(port, listening);
 function listening(){
     console.log(`running on localhost: ${port}`);
 }
+
+// Add a GET route that returns the projectData object
+app.get("/all", function(req,res){res.send(projectData);});
+
+// Add a POST route that adds incoming data to projectData
+app.post("/add", function(req,res){
+    projectData['temp'] = req.body.temp;
+    projectData['date'] = req.body.date;
+    projecrData['userResponse'] = req.body.content;
+    res.send(projectData);
+})
