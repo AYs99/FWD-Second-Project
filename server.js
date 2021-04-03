@@ -37,6 +37,6 @@ app.post("/add", function(req,res){
     console.log(req.body);
     projectData.temp = req.body.temp;
     projectData.date = req.body.date;
-    projecrData.userResponse = req.body.content;
+    projectData.userResponse = req.body.userResponse;
     res.send(projectData);
 })
